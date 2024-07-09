@@ -1,0 +1,155 @@
+$breakpoints: (
+  "sm": "screen and (min-width: 431px)",
+  "md": "screen and (min-width: 768px)",
+  "lg": "screen and (min-width: 1000px)",
+  "xl": "screen and (min-width: 1200px)",
+) !default;
+
+@mixin media($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+body {
+  font-family: "Noto Sans";
+  font-family: "Irish Grover";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  background-color: #1f2320;
+  color: #fff;
+  line-height: normal;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  margin-top: 50px;
+  &__visual {
+    padding-bottom: 60px;
+    background-color: #1f2320;
+  }
+  &__title {
+    border-top: #fff 1px solid;
+    border-bottom: #fff 1px solid;
+    position: relative;
+  }
+
+  &__top-text {
+    margin-left: 40px;
+    font-size: 20px;
+    position: absolute;
+    top: 17%;
+    left: 0;
+  }
+
+  &__infinity {
+    display: flex;
+    overflow: hidden;
+  }
+  &__back-text {
+    font-size: 28px;
+    color: #3b423d;
+    font-weight: bold;
+    font-family: "Noto Sans";
+    display: flex;
+    list-style: none;
+    padding: 0;
+    animation: infinity-scroll-left 10s infinite linear 0.5s both;
+  }
+  &__scroll-text {
+    width: calc(100vw / 2.5);
+    margin-right: 0.1rem;
+  }
+
+  @keyframes infinity-scroll-left {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+.animal {
+  &__category {
+    display: flex;
+    padding: 0 15px;
+  }
+
+  &__category {
+    font-size: 20px;
+    justify-content: space-between;
+  }
+}
+
+@include media("sm") {
+  .header {
+    &__hamburger {
+      display: none;
+    }
+    &__area {
+      display: none;
+    }
+    &__slide-menu {
+      display: none;
+    }
+    &__pc-header {
+      display: block;
+      position: fixed;
+      top: 20px;
+      left: 14%;
+      width: 100%;
+    }
+    &__pc-nav {
+      max-width: 800px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 25px;
+      &a {
+        color: #fff;
+        padding: 0 20px;
+        font-size: 24px;
+      }
+    }
+    &__pc-logo {
+      width: 100px;
+      height: auto;
+    }
+    &__en {
+      color: #fff;
+    }
+  }
+
+  .main {
+    &__inner {
+      width: 83.05%;
+      max-width: 1340px;
+      margin: 0 auto;
+    }
+    &__visual {
+      width: 100vw;
+      height: 100vh;
+    }
+    &__top-text {
+      font-size: 48px;
+      left: 100px;
+    }
+    &__back-text {
+      font-size: 70px;
+    }
+    &__scroll-text {
+      width: calc(100vw / 4.5);
+    }
+  }
+}

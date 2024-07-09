@@ -1,0 +1,197 @@
+$breakpoints: (
+  "sm": "screen and (min-width: 431px)",
+  "md": "screen and (min-width: 768px)",
+  "lg": "screen and (min-width: 1000px)",
+  "xl": "screen and (min-width: 1200px)",
+) !default;
+
+@mixin media($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+.footer {
+  background-color: #121711;
+  padding-top: 40px;
+  &__inner {
+    margin: 0 40px;
+  }
+  &__head {
+    display: flex;
+    margin-bottom: 40px;
+  }
+  &__title {
+    margin-right: 20px;
+    font-size: 38px;
+  }
+  &__insta {
+    width: 33px;
+  }
+  &__text {
+    font-family: "Noto Sans";
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: normal;
+  }
+  &__contact {
+    margin: 0 auto;
+
+    background: url("/image/footer__contact.png") center center / cover
+      no-repeat;
+  }
+  &__textall {
+    margin: 0 auto;
+    padding: 60px 0;
+    text-align: center;
+  }
+  &__form-text {
+    font-family: "Noto Sans";
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+  &__form-text2 {
+    font-family: "Noto Sans";
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+  &__btn {
+    font-family: "Noto Sans";
+    font-size: 18px;
+    color: #000;
+    max-width: 65%;
+    padding: 11px 16px;
+    background-color: #fff;
+    border-radius: 30px;
+    border: 1px solid #2e2e2e;
+    background: #fff;
+  }
+  &__googlemap {
+    display: none;
+  }
+  &__copy {
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 16px;
+  }
+  &__textbox {
+    margin: 0 30px;
+    line-height: 1.2em;
+  }
+}
+.sitemap {
+  font-family: "Noto Sans";
+  &__all {
+    margin: 0 35px 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 10px;
+  }
+  &__title {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 22px;
+    margin-bottom: 20px;
+  }
+  &__head {
+    font-size: 18px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fff;
+  }
+  &__text {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+}
+@include media("sm") {
+  .footer {
+    padding: 68px 0 0;
+    &__inner {
+      width: 83.05%;
+      max-width: 1340px;
+      margin: 0 auto;
+    }
+    &__textbox {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+    &__text {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+    &__adress {
+      margin-top: 68px;
+    }
+
+    &__contact {
+      margin: 0;
+      margin-left: 26px;
+      width: 400px;
+      height: auto;
+    }
+    &__form-text {
+      font-size: 50px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    &__form-text2 {
+      font-size: 30px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    &__btn {
+      display: block;
+      font-size: 30px;
+      margin: 0 auto 0;
+      padding: 12px 30px;
+    }
+    &__textall {
+      left: 9%;
+    }
+    &__con-map {
+      width: 77vw;
+      display: flex;
+      justify-content: space-between;
+      align-self: center;
+    }
+    &__map {
+      width: 45%;
+    }
+    &__googlemap {
+      display: block;
+      width: 50%;
+    }
+    &__sitemap {
+      width: 100%;
+    }
+  }
+  .sitemap {
+    &__title {
+      margin-left: 48.5%;
+      width: fit-content;
+      text-align: left;
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+    &__head {
+      font-size: 20px;
+      padding-right: 20px;
+    }
+    &__text {
+      margin-top: 26px;
+    }
+    &__all {
+      margin-left: 49%;
+      width: 46%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

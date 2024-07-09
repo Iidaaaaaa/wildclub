@@ -1,0 +1,142 @@
+body {
+  font-family: "Noto Sans";
+  font-family: "Irish Grover";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  background-color: #1f2320;
+  color: #fff;
+  line-height: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  margin-top: 50px;
+}
+.main__visual {
+  padding-bottom: 60px;
+  background-color: #1f2320;
+}
+.main__title {
+  border-top: #fff 1px solid;
+  border-bottom: #fff 1px solid;
+  position: relative;
+}
+.main__top-text {
+  margin-left: 40px;
+  font-size: 20px;
+  position: absolute;
+  top: 17%;
+  left: 0;
+}
+.main__infinity {
+  display: flex;
+  overflow: hidden;
+}
+.main__back-text {
+  font-size: 28px;
+  color: #3b423d;
+  font-weight: bold;
+  font-family: "Noto Sans";
+  display: flex;
+  list-style: none;
+  padding: 0;
+  -webkit-animation: infinity-scroll-left 10s infinite linear 0.5s both;
+          animation: infinity-scroll-left 10s infinite linear 0.5s both;
+}
+.main__scroll-text {
+  width: 40vw;
+  margin-right: 0.1rem;
+}
+@-webkit-keyframes infinity-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes infinity-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animal__category {
+  display: flex;
+  padding: 0 15px;
+}
+.animal__category {
+  font-size: 20px;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 431px) {
+  .header__hamburger {
+    display: none;
+  }
+  .header__area {
+    display: none;
+  }
+  .header__slide-menu {
+    display: none;
+  }
+  .header__pc-header {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 14%;
+    width: 100%;
+  }
+  .header__pc-nav {
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+  }
+  .header__pc-nava {
+    color: #fff;
+    padding: 0 20px;
+    font-size: 24px;
+  }
+  .header__pc-logo {
+    width: 100px;
+    height: auto;
+  }
+  .header__en {
+    color: #fff;
+  }
+  .main__inner {
+    width: 83.05%;
+    max-width: 1340px;
+    margin: 0 auto;
+  }
+  .main__visual {
+    width: 100vw;
+    height: 100vh;
+  }
+  .main__top-text {
+    font-size: 48px;
+    left: 100px;
+  }
+  .main__back-text {
+    font-size: 70px;
+  }
+  .main__scroll-text {
+    width: 22.2222222222vw;
+  }
+}
+/*# sourceMappingURL=animal.css.map */

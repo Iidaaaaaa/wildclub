@@ -1,0 +1,151 @@
+$breakpoints: (
+  "sm": "screen and (min-width: 431px)",
+  "md": "screen and (min-width: 768px)",
+  "lg": "screen and (min-width: 1000px)",
+  "xl": "screen and (min-width: 1200px)",
+) !default;
+
+@mixin media($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+.header {
+  padding: 40px 0;
+  margin: 0 0 0 auto;
+  background-color: #1f2320;
+  &__area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 30px;
+    left: 2px;
+    width: 90%;
+    z-index: 9999;
+  }
+
+  &__inner {
+    width: 84.375%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  &__pc-header {
+    display: none;
+  }
+  &__logo {
+    margin-left: 30px;
+    z-index: 999;
+  }
+  &__hamburger {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    z-index: 9999;
+  }
+  &__border {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+  }
+  &__hamburger span:first-of-type {
+    top: 0;
+  }
+  &__hamburger span:nth-of-type(2) {
+    top: 50%;
+  }
+  &__hamburger span:last-of-type {
+    top: 100%;
+  }
+  &__slide-menu {
+    z-index: 99;
+    padding-top: 70px;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    transform: translateX(100%);
+    transition: 0.5s;
+  }
+  &__menu {
+    margin-top: 60px;
+    color: #fff;
+    line-height: 400%;
+    text-align: center;
+  }
+  &__hamburger.active span:first-of-type {
+    /* ハンバーガーメニューの1番目の線 */
+    background-color: #fff;
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  &__hamburger.active span:nth-of-type(2) {
+    /* ハンバーガーメニューの2番目の線 */
+    opacity: 0; /* 透明にする */
+  }
+  &__hamburger.active span:last-of-type {
+    /* ハンバーガーメニューの3番目の線 */
+    background-color: #fff;
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+  &__slide-menu.active {
+    transform: translateX(0);
+  }
+  &__link {
+    color: #fff;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    padding: 10px 22px;
+  }
+  &__ja {
+    display: none;
+  }
+}
+
+@include media("sm") {
+  .header {
+    &__hamburger {
+      display: none;
+    }
+    &__area {
+      display: none;
+    }
+    &__slide-menu {
+      display: none;
+    }
+    &__pc-header {
+      display: block;
+      position: fixed;
+      z-index: 9999;
+      top: 20px;
+      left: 14%;
+      width: 100%;
+    }
+    &__pc-nav {
+      max-width: 800px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 25px;
+      &a {
+        color: #fff;
+        padding: 0 20px;
+        font-size: 24px;
+      }
+    }
+    &__pc-logo {
+      width: 100px;
+      height: auto;
+    }
+    &__en {
+      color: #fff;
+    }
+  }
+}

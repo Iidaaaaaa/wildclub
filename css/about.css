@@ -1,0 +1,311 @@
+body {
+  font-family: "Noto Sans";
+  font-family: "Irish Grover";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  background-color: #1f2320;
+  color: #fff;
+  line-height: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  margin-top: 50px;
+}
+.main__visual {
+  width: 100vw;
+  padding-bottom: 60px;
+  background-color: #1f2320;
+}
+.main__title {
+  border-top: #fff 1px solid;
+  border-bottom: #fff 1px solid;
+  position: relative;
+}
+.main__top-text {
+  margin-left: 40px;
+  font-size: 20px;
+  position: absolute;
+  top: 17%;
+  left: 0;
+}
+.main__infinity {
+  display: flex;
+  overflow: hidden;
+}
+.main__back-text {
+  font-size: 28px;
+  color: #3b423d;
+  font-weight: bold;
+  font-family: "Noto Sans";
+  display: flex;
+  list-style: none;
+  padding: 0;
+  -webkit-animation: infinity-scroll-left 10s infinite linear 0.5s both;
+          animation: infinity-scroll-left 10s infinite linear 0.5s both;
+}
+.main__scroll-text {
+  width: 40vw;
+  margin-right: 0.1rem;
+}
+@-webkit-keyframes infinity-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes infinity-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@media screen and (min-width: 431px) {
+  .main .main__visual {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+.about {
+  margin-top: 20px;
+}
+.about__image {
+  width: 60%;
+  max-height: 219px;
+  margin: 20px 0 40px;
+}
+.about__inner {
+  margin: 0 40px;
+}
+.about__title {
+  margin-left: 3px;
+  font-size: 28px;
+  width: 230px;
+}
+.about__text {
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  line-height: 1.6;
+  margin: 20px 5px 0;
+}
+.about__article {
+  margin-bottom: 50px;
+}
+.about__headtitle {
+  margin-left: 7px;
+  margin-top: 40px;
+  font-family: "Noto Sans";
+  font-size: 20px;
+  font-weight: bold;
+}
+.about__value {
+  font-family: "Noto Sans";
+  font-size: 28px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px auto 20px;
+  color: #fff500;
+  text-align: left;
+}
+.about__shop {
+  margin: 10px 8% 20px;
+}
+.about__value-text {
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  line-height: 1.6;
+  margin: 0 30px;
+}
+.about__slide {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.office {
+  margin-top: 60px;
+  margin-bottom: 80px;
+  line-height: 1.2em;
+}
+.office__title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 54px;
+}
+.office__category {
+  margin: 0 20px;
+  padding: 15px 0;
+  border-top: #fff 1px solid;
+  border-bottom: #fff 1px solid;
+}
+.office__tag {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-family: "Noto Sans ";
+}
+.office__text {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Noto Sans";
+}
+
+@media screen and (min-width: 431px) {
+  .header__hamburger {
+    display: none;
+  }
+  .header__area {
+    display: none;
+  }
+  .header__slide-menu {
+    display: none;
+  }
+  .header__pc-header {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 14%;
+    width: 100%;
+  }
+  .header__pc-nav {
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+  }
+  .header__pc-nava {
+    color: #fff;
+    padding: 0 20px;
+    font-size: 24px;
+  }
+  .header__pc-logo {
+    width: 100px;
+    height: auto;
+  }
+  .header__en {
+    color: #fff;
+  }
+  .main__inner {
+    width: 83.05%;
+    max-width: 1340px;
+    margin: 0 auto;
+  }
+  .main__top-text {
+    font-size: 48px;
+    left: 100px;
+  }
+  .main__back-text {
+    font-size: 70px;
+  }
+  .main__scroll-text {
+    width: 22.2222222222vw;
+  }
+  .about {
+    margin-top: 40px;
+  }
+  .about__inner {
+    width: 83.05%;
+    max-width: 1340px;
+    margin: 0 auto;
+  }
+  .about__image {
+    width: 48%;
+    max-height: 614px;
+  }
+  .about__flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .about__flex:nth-child(2) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .about__title-div {
+    margin-top: 130px;
+    width: 40%;
+    margin-right: 100px;
+  }
+  .about__title {
+    font-size: 48px;
+    width: 66%;
+  }
+  .about__text {
+    font-size: 20px;
+    line-height: 1.7em;
+    letter-spacing: 0.12em;
+  }
+  .about__headtitle {
+    margin-top: 150px;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .about__value {
+    font-size: 40px;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+  .about__left {
+    margin: 0 76px 50px;
+  }
+  .about__value-text {
+    font-size: 20px;
+    width: 73%;
+    margin: 0 auto;
+  }
+  .about__air {
+    width: 50%;
+  }
+  .about__article {
+    width: 45%;
+  }
+  .about__slide {
+    margin-top: 94px;
+  }
+  .office__inner {
+    width: 65.67%;
+    max-width: 1340px;
+    margin: 0 auto;
+  }
+  .office__title {
+    margin: 160px 0 70px;
+    font-size: 48px;
+  }
+  .office__category {
+    display: flex;
+    padding: 20px 0;
+  }
+  .office__text {
+    line-height: 1.7em;
+    letter-spacing: 0.11em;
+  }
+  .office__tag {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 30px;
+  }
+  .office__tag-pc {
+    margin: auto 0;
+    margin-right: 77px;
+  }
+  .office__text {
+    font-size: 20px;
+    font-weight: 200;
+  }
+}
+/*# sourceMappingURL=about.css.map */
