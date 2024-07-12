@@ -89,33 +89,94 @@
       </div>
     </header>
     <main class="main">
-      <img
-        class="main__visual"
-        src="./image/about.png"
-        alt="about_mainvisual"
-      />
       <div class="main__title">
         <div class="main__infinity">
           <ul class="main__back-text">
-            <li class="main__scroll-text">ANIMAL</li>
-            <li class="main__scroll-text">ANIMAL</li>
+            <li class="main__scroll-text">CONTACT</li>
+            <li class="main__scroll-text">CONTACT</li>
           </ul>
           <ul class="main__back-text">
-            <li class="main__scroll-text">ANIMAL</li>
-            <li class="main__scroll-text">ANIMAL</li>
+            <li class="main__scroll-text">CONTACT</li>
+            <li class="main__scroll-text">CONTACT</li>
           </ul>
           <ul class="main__back-text">
-            <li class="main__scroll-text">ANIMAL</li>
-            <li class="main__scroll-text">ANIMAL</li>
+            <li class="main__scroll-text">CONTACT</li>
+            <li class="main__scroll-text">CONTACT</li>
           </ul>
           <ul class="main__back-text">
-            <li class="main__scroll-text">ANIMAL</li>
-            <li class="main__scroll-text">ANIMAL</li>
+            <li class="main__scroll-text">CONTACT</li>
+            <li class="main__scroll-text">CONTACT</li>
           </ul>
         </div>
 
         <div class="main__inner">
-          <h2 class="main__top-text">動物一覧</h2>
+          <h2 class="main__top-text">お問い合わせ</h2>
+        </div>
+      </div>
+
+      <div class="contact">
+        <div class="contact__inner">
+          <p class="contact__text">
+            WILDCLUBでは電話をメインに対応しています。
+          </p>
+          <p class="contact__number">080-3060-3077</p>
+        </div>
+        <div class="form">
+          <div class="form__inner">
+            <form class="form__back">
+              <div class="form__name">
+                <div class="form__reservation">
+                  <label class="form__text" for="name">お名前</label>
+                  <div class="form__checkarea">
+                    <label class="form__text" for="reservation">予約受付</label>
+                    <input class="form__check" type="checkbox" />
+                  </div>
+                </div>
+
+                <input
+                  class="form__input"
+                  type="text"
+                  name="name"
+                  required
+                  placeholder="例：田中　花子"
+                />
+              </div>
+              <div class="form__phone">
+                <label class="form__text" for="name">電話番号</label>
+                <input
+                  class="form__input"
+                  type="number"
+                  name="number"
+                  required
+                  placeholder="例：080-1234-5678"
+                />
+              </div>
+              <div class="form__email">
+                <label class="form__text" for="name">メールアドレス</label>
+                <input
+                  class="form__input"
+                  type="email"
+                  name="number"
+                  required
+                  placeholder="例：mail@examplecom"
+                />
+              </div>
+              <div class="form__content">
+                <label class="form__text" for="name">お問い合わせ内容</label>
+                <textarea
+                  required
+                  name="textarea"
+                  class="form__textarea"
+                ></textarea>
+              </div>
+              <div class="form__button">
+                <input class="form__submit" type="submit" value="送信" />
+              </div>
+            </form>
+            <p class="contact__attention">
+              ※メールの場合ご返信が遅くなる可能性があります。
+            </p>
+          </div>
         </div>
       </div>
     </main>

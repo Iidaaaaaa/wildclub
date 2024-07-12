@@ -1,3 +1,229 @@
+$breakpoints: (
+  "sm": "screen and (min-width: 431px)",
+  "md": "screen and (min-width: 768px)",
+  "lg": "screen and (min-width: 1000px)",
+  "xl": "screen and (min-width: 1200px)",
+) !default;
+
+@mixin media($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
 body {
-  background-color: #fff;
+  font-family: "Noto Sans";
+  font-family: "Irish Grover";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  background-color: #1f2320;
+  color: #fff;
+  line-height: normal;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+input {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  margin-top: 50px;
+  &__visual {
+    width: 100vw;
+    padding-bottom: 60px;
+    background-color: #1f2320;
+  }
+  &__title {
+    border-top: #fff 1px solid;
+    border-bottom: #fff 1px solid;
+    position: relative;
+  }
+
+  &__top-text {
+    margin-left: 40px;
+    font-size: 20px;
+    position: absolute;
+    top: 17%;
+    left: 0;
+  }
+
+  &__infinity {
+    display: flex;
+    overflow: hidden;
+  }
+  &__back-text {
+    font-size: 28px;
+    color: #3b423d;
+    font-weight: bold;
+    font-family: "Noto Sans";
+    display: flex;
+    list-style: none;
+    padding: 0;
+    animation: infinity-scroll-left 10s infinite linear 0.5s both;
+  }
+  &__scroll-text {
+    width: calc(100vw / 2.5);
+    margin-right: 1.4rem;
+  }
+
+  @keyframes infinity-scroll-left {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .contact {
+    font-family: "Noto Sans";
+    &__inner {
+      width: 83.05%;
+      max-width: 1340px;
+      margin: 0 auto;
+    }
+    &__text {
+      font-size: 22px;
+      margin: 40px auto;
+    }
+    &__number {
+      font-size: 26px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    &__attention {
+      font-size: 12px;
+      margin-left: auto;
+      margin-right: 16px;
+      margin-bottom: 90px;
+      max-width: 150px;
+    }
+  }
+  .form {
+    &__inner {
+      width: 93.3%;
+      margin: 0 auto;
+    }
+    &__name {
+      font-weight: bold;
+      margin: 0 25px;
+    }
+    &__phone {
+      font-weight: bold;
+      margin: 20px 25px 0;
+    }
+    &__email {
+      font-weight: bold;
+      margin: 20px 25px 0;
+    }
+    &__content {
+      font-weight: bold;
+      margin: 20px 25px 0;
+    }
+    &__input {
+      font-size: 18px;
+      margin: 0 auto;
+      width: 100%;
+      height: 30px;
+      margin-top: 16px;
+      padding: 2px 10px;
+    }
+    &__textarea {
+      font-size: 18px;
+      margin: 0 auto;
+      width: 100%;
+      height: 100px;
+      margin-top: 16px;
+      padding: 2px 10px;
+    }
+    &__reservation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__checkarea {
+      display: flex;
+      align-items: center;
+    }
+    &__check {
+      margin-left: 16px;
+      width: 30px;
+      height: 30px;
+    }
+    &__button {
+      margin-top: 24px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    &__submit {
+      border: none;
+      text-align: center;
+      color: #fff;
+      padding: 6px 52px;
+      font-size: 16px;
+      border-radius: 5px;
+      background: #3e3e3e;
+    }
+  }
+
+  @include media("sm") {
+    .main {
+      &__visual {
+        width: 100vw;
+        height: 100vh;
+      }
+      &__inner {
+        width: 83.05%;
+        max-width: 1340px;
+        margin: 0 auto;
+      }
+      &__top-text {
+        font-size: 48px;
+        left: 100px;
+      }
+      &__back-text {
+        font-size: 70px;
+      }
+      &__scroll-text {
+        width: calc(100vw / 4.5);
+        margin-right: 100px;
+      }
+    }
+    .contact {
+      &__text {
+        margin: 70px 0;
+        text-align: center;
+        font-size: 36px;
+      }
+      &__number {
+        font-size: 40px;
+        margin-bottom: 90px;
+      }
+    }
+    .contact {
+      &__attention {
+        margin-top: 60px;
+        font-size: 20px;
+        max-width: fit-content;
+      }
+    }
+    .form {
+      padding-top: 107px;
+      padding-bottom: 30px;
+      margin: 0 auto;
+      width: 1100px;
+      height: auto;
+      background-color: #2d2d2d;
+    }
+  }
 }

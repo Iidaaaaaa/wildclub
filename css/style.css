@@ -239,6 +239,7 @@ ul {
   }
   .card {
     display: flex;
+    justify-content: space-between;
   }
   .card__image {
     width: 55%;
