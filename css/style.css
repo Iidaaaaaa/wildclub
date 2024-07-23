@@ -73,7 +73,7 @@ ul {
 }
 .header__slide-menu {
   z-index: 99;
-  padding-top: 70px;
+  padding-top: 100px;
   background-color: rgba(0, 0, 0, 0.9);
   position: fixed;
   top: 0px;
@@ -115,8 +115,8 @@ ul {
   overflow: hidden;
   padding: 10px 22px;
 }
-.header__ja {
-  display: none;
+.header__en {
+  color: #fff;
 }
 
 .news__inner {
@@ -163,9 +163,14 @@ ul {
   font-size: 16px;
   color: #990001;
 }
+.card__tag {
+  margin-right: 10px;
+  font-size: 11px;
+}
 .card__tagall {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   font-size: 12px;
   color: #0099ff;
@@ -212,7 +217,7 @@ ul {
   }
   .header__pc-header {
     display: block;
-    position: fixed;
+    position: absolute;
     z-index: 9999;
     bottom: 50px;
     left: 15.8%;
@@ -237,6 +242,32 @@ ul {
     font-size: 28px;
     color: #000;
   }
+  .header__pc-menu {
+    overflow: hidden;
+    height: 27px;
+    width: 150px;
+    position: relative;
+    transition: all 0.3s;
+  }
+  .header__pc-link {
+    font-size: 24px;
+    position: absolute;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.3s;
+  }
+  .header__pc-link:hover {
+    transform: translate(0%, -53%);
+    color: #f00;
+  }
+  .news__title {
+    font-size: 36px;
+  }
+  .news__link {
+    font-size: 20px;
+  }
   .card {
     display: flex;
     justify-content: space-between;
@@ -245,7 +276,22 @@ ul {
     width: 55%;
   }
   .card__textall {
+    margin-top: 34px;
     width: 40%;
+  }
+  .card__title {
+    font-size: 24px;
+  }
+  .card__text {
+    font-size: 18px;
+  }
+  .card__price {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .card__tag {
+    margin-right: 20px;
+    font-size: 16px;
   }
 }
 /*# sourceMappingURL=style.css.map */

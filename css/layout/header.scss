@@ -104,9 +104,6 @@ $breakpoints: (
     overflow: hidden;
     padding: 10px 22px;
   }
-  &__ja {
-    display: none;
-  }
 }
 
 @include media("sm") {

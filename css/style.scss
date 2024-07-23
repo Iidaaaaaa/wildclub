@@ -83,7 +83,7 @@ ul {
   }
   &__slide-menu {
     z-index: 99;
-    padding-top: 70px;
+    padding-top: 100px;
     background-color: rgba(0, 0, 0, 0.9);
     position: fixed;
     top: 0px;
@@ -125,8 +125,8 @@ ul {
     overflow: hidden;
     padding: 10px 22px;
   }
-  &__ja {
-    display: none;
+  &__en {
+    color: #fff;
   }
 }
 
@@ -174,9 +174,14 @@ ul {
     font-size: 16px;
     color: #990001;
   }
+  &__tag {
+    margin-right: 10px;
+    font-size: 11px;
+  }
   &__tagall {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     font-size: 12px;
     color: #0099ff;
@@ -224,7 +229,7 @@ ul {
     }
     &__pc-header {
       display: block;
-      position: fixed;
+      position: absolute;
       z-index: 9999;
       bottom: 50px;
       left: 15.8%;
@@ -249,6 +254,34 @@ ul {
       font-size: 28px;
       color: #000;
     }
+    &__pc-menu {
+      overflow: hidden;
+      height: 27px;
+      width: 150px;
+      position: relative;
+      transition: all 0.3s;
+    }
+    &__pc-link {
+      font-size: 24px;
+      position: absolute;
+      width: 150px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      transition: all 0.3s;
+      &:hover {
+        transform: translate(0%, -53%);
+        color: #f00;
+      }
+    }
+  }
+  .news {
+    &__title {
+      font-size: 36px;
+    }
+    &__link {
+      font-size: 20px;
+    }
   }
   .card {
     display: flex;
@@ -257,7 +290,22 @@ ul {
       width: 55%;
     }
     &__textall {
+      margin-top: 34px;
       width: 40%;
+    }
+    &__title {
+      font-size: 24px;
+    }
+    &__text {
+      font-size: 18px;
+    }
+    &__price {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    &__tag {
+      margin-right: 20px;
+      font-size: 16px;
     }
   }
 }
