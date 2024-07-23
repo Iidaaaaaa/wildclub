@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Noto Sans";
   font-family: "Irish Grover";
@@ -137,6 +138,146 @@ ul {
   }
   .main__scroll-text {
     width: 22.2222222222vw;
+  }
+}
+.wakeruyatu {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-around;
+  margin: 6% 3%;
+}
+
+.wakeruyatu-pc {
+  display: none;
+}
+
+.animal_photo__osaru_saru {
+  font-family: "Noto Sans";
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+.list__inner {
+  width: calc(100% - 60px);
+  margin: 0 auto;
+}
+.list__both {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  gap: 0 40px;
+}
+.list__right {
+  width: 48%;
+}
+.list__left {
+  width: 48%;
+}
+
+.dbt_esa {
+  margin: 82px auto 100px auto;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 縦方向の中央配置 */
+  width: 330px;
+  height: 70px;
+  background-color: #319a00;
+  border-radius: 45px;
+  color: #fff;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.dbt_esa__circle {
+  margin-right: 10px; /* 追加: dbt_esa__bunとの間隔を調整 */
+  background-color: #fff; /* 追加: 背景色を白に設定 */
+  border-radius: 50%; /* 追加: 円形にするためのボーダー半径 */
+  width: 40px; /* 追加: 円形の幅 */
+  height: 40px; /* 追加*/
+  position: relative;
+}
+.dbt_esa__sankaku {
+  position: absolute;
+  z-index: 97;
+  color: #319a00;
+  font-family: "Noto Sans";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  top: -6px;
+  left: 13px;
+}
+
+@media screen and (min-width: 431px) {
+  .wakeruyatu-pc {
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 100px 0;
+  }
+  .wakeruyatu {
+    display: none;
+  }
+  .animal_photo__osaru_saru {
+    font-family: "Noto Sans";
+    font-size: 16px;
+    margin-bottom: 18px;
+    margin-top: 40px;
+  }
+  .animal_photo__osaru_saru:first-child {
+    margin-top: 0;
+  }
+  .list {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .list__inner {
+    width: 89.07%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .list__left {
+    width: 48%;
+  }
+  .list__right {
+    width: 48%;
+  }
+  .animal_photo__osaru_saru {
+    overflow: hidden;
+    position: relative;
+  }
+  .animal_photo__osaru_saru .caption {
+    font-size: 130%;
+    color: #fff;
+    padding-top: 10px;
+    text-align: center;
+  }
+  .animal_photo__osaru_saru .mask {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: -50px; /* 枠の下に置いて表示しない */
+    left: 0;
+    background-color: #1f2320;
+    transition: all 0.4s ease;
+  }
+  .animal_photo__osaru_saru:hover .mask {
+    bottom: 0px; /* 上にスライドして表示 */
+  }
+  .animal_photo__osaru_saru img {
+    transition: all 0.4s ease;
+    transform: scale(1.2); /* 1.2倍の大きさで表示 */
+    width: 100%;
+  }
+  .animal_photo__osaru_saru:hover img {
+    transform: scale(1) translateY(-50px); /* 元の大きさに戻し、上にずらす */
   }
 }
 /*# sourceMappingURL=animal.css.map */
